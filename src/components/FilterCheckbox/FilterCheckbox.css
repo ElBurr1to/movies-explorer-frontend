@@ -1,0 +1,32 @@
+.filter-checkbox {
+  width: 36px;
+  height: 20px;
+  background-color: #343434;
+  border-radius: 20px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.filter-checkbox__label {
+  cursor: pointer;
+}
+
+.filter-checkbox__default-checkbox {
+  display: none;
+}
+
+.filter-checkbox__custom-checkbox {
+  width: 14px;
+  height: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #a0a0a0;
+  margin-left: 0;
+  transition: background-color .1s linear 0s, margin-left .1s linear 0s;
+}
+
+.filter-checkbox__default-checkbox:checked + .filter-checkbox__custom-checkbox {
+  background-color: #2be080;
+  margin-left: 16px;
+}
+

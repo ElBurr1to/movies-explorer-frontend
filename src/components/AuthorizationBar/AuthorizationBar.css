@@ -1,0 +1,42 @@
+.authorization-bar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.authorization-bar__item {
+  display: block;
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.authorization-bar__item_active {
+  border-radius: 3px;
+  background-color: #3ddc84;
+  color: black;
+  cursor: pointer;
+}
+
+.authorization-bar__item:hover {
+  opacity: .7;
+}
+
+.authorization-bar__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 320px) {
+  .authorization-bar__list {
+    gap: 2px;
+  }
+
+  .authorization-bar__item {
+    padding: 5px 12px;
+    font-size: 10px;
+  }
+}
