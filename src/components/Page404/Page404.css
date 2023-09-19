@@ -38,11 +38,10 @@
   opacity: .7;
 }
 
-@media (max-width: 768px) {
-  .page404__title {
-    margin: 0;
+@media (max-width: 800px) {
+  .page404 {
+    padding: 222px;
   }
-
 
   .page404__link {
     margin-top: 184px;
@@ -50,15 +49,21 @@
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .page404 {
-    padding: 30px;
+    padding: 40px 0 30px;
   }
 
   .page404__title {
     font-size: 80px;
     line-height: 97px;
     margin-top: auto;
+  }
+
+  .page404__message {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .page404__link {

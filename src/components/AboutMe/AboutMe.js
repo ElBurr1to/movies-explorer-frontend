@@ -17,7 +17,7 @@ function AboutMe(props) {
                 и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур».
                 После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.
               </p>
-              <a href='https://github.com/ElBurr1to' className='about-me__github'>Github</a>
+              <a href='https://github.com/ElBurr1to' target='_blank' rel='noreferrer' className='about-me__github'>Github</a>
             </div>
             <div className='about-me__description-block'>
               <img className='about-me__photo' src={photo} alt='Фото Виталия'/>

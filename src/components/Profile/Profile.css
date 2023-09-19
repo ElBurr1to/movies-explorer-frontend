@@ -8,7 +8,7 @@
 
 .profile__form {
   min-height: calc(100vh - 74px);
-  padding: 75px 30px 70px;
+  padding: 75px 0 70px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -24,7 +24,7 @@
 
 .profile__fieldset {
   margin: 0;
-  margin-top: 123px;
+  margin-top: 107px;
   padding: 0;
   border: none;
 }
@@ -61,7 +61,7 @@
 
 .profile__submit-btn {
   align-self: center;
-  margin-top: auto;
+  margin-top: 205px;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -80,17 +80,17 @@
   opacity: .8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .profile__form {
-    justify-content: center;
+    padding-top: 235px;
   }
 
   .profile__fieldset {
-    margin-top: 96px;
+    margin-top: 82px;
   }
 
   .profile__submit-btn {
-    margin-top: 210px;
+    margin-top: 195px;
   }
 
   .profile__submit-btn_type_exit {
@@ -98,18 +98,21 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .profile__form {
     justify-content: flex-start;
     padding: 70px 30px 40px;
   }
 
   .profile__fieldset {
-    margin-top: 70px;
+    margin-top: 66px;
   }
 
   .profile__submit-btn {
     margin-top: auto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
   }
 
   .profile__submit-btn_type_exit {

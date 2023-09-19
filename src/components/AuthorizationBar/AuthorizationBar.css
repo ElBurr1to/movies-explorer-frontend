@@ -30,7 +30,7 @@
   color: inherit;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .authorization-bar__list {
     gap: 2px;
   }

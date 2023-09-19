@@ -4,7 +4,6 @@ import './Techs.css';
 function Techs(props) {
   return (
     <section className='techs'>
-      <div>
         <Container>
           <div className='techs__content'>
             <h2 className='techs__title'>Технологии</h2>
@@ -21,7 +20,6 @@ function Techs(props) {
             </ul>
           </div>
         </Container>
-      </div>
     </section>
   );
 }

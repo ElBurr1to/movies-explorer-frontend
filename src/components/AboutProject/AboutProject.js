@@ -4,7 +4,6 @@ import './AboutProject.css';
 function AboutProject(props) {
   return (
     <section className='about-project'>
-      <div>
         <Container>
           <h2 className='about-project__title'>О проекте</h2>
           <div className='about-project__description'>
@@ -28,7 +27,6 @@ function AboutProject(props) {
             </div>
           </div>
         </Container>
-      </div>
     </section>
   );
 }

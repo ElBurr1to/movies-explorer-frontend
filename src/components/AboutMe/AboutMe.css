@@ -1,8 +1,6 @@
 .about-me {
-  min-height: 100vh;
   padding: 110px 0 125px;
   background-color: #202020;
-  box-sizing: border-box;
 }
 
 .about-me__title {
@@ -20,8 +18,8 @@
   padding: 0;
   margin: 66px 0 100px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 200px;
+  grid-template-columns: 2fr  270px;
+  gap: 270px;
 }
 
 .about-me__description-block {
@@ -71,9 +69,9 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .about-me {
-    padding: 90px 0;
+    padding: 90px 20px;
   }
 
   .about-me__description {
@@ -103,7 +101,7 @@
 
 @media (max-width: 450px) {
   .about-me {
-    padding: 70px 0;
+    padding: 80px 14px 70px;
   }
 
   .about-me__title {

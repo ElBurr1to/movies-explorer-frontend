@@ -11,11 +11,11 @@ function Profile(props) {
           <fieldset className='profile__fieldset'>
             <label for='name' className='profile__label'>
               Имя
-              <input type='text' id='name' name='name' className='profile__input' aria-label='Имя' defaultValue={'Виталий'}/>
+              <input type='text' id='name' name='name' className='profile__input' aria-label='Имя' defaultValue={'Виталий'} placeholder='Введите имя'/>
             </label>
             <label for='email' className='profile__label'>
               E-mail
-              <input type='email' id='email' name='email' className='profile__input' aria-label='E-mail' defaultValue={'pochta@yandex.ru'} />
+              <input type='email' id='email' name='email' className='profile__input' aria-label='E-mail' defaultValue={'pochta@yandex.ru'} placeholder='Введите почту'/>
             </label>
           </fieldset>
           <button type='submit' className='profile__submit-btn' aria-label='Редактировать'>Редактировать</button>

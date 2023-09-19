@@ -21,7 +21,7 @@
   display: inline-block;
   width: 26px;
   height: 26px;
-  background-image: url(../../images/profile.png);
+  background-image: url(../../images/profile.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -30,7 +30,7 @@
   background-color: #0f4157;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .profile-link {
     display: none;
   }

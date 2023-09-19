@@ -7,18 +7,18 @@ function Register(props) {
   return (
     <section className='register'>
       <div className='register__content'>
-        <Logo />
+        <Link to='/' className='register__logo'><Logo /></Link>
         <form name='register' className='form'>
           <h1 className='form__title'>Добро пожаловать!</h1>
           <fieldset className='form__fieldset'>
             <label for='name' className='form__label'>Имя</label>
-            <input type='text' id='name' name='name' className='form__input' aria-label='Имя' required />
+            <input type='text' id='name' name='name' className='form__input' aria-label='Имя' placeholder='Введите имя' required />
             <p className='form__input-error'>Ошибка</p>
             <label for='email' className='form__label'>E-mail</label>
-            <input type='email' id='email' name='email' className='form__input' aria-label='Почта' />
+            <input type='email' id='email' name='email' className='form__input' aria-label='Почта' placeholder='Введите почту'/>
             <p className='form__input-error'>Ошибка</p>
             <label for='password' className='form__label'>Пароль</label>
-            <input type='password' id='password' name='password' className='form__input' aria-label='Пароль' />
+            <input type='password' id='password' name='password' className='form__input' aria-label='Пароль' placeholder='Введите пароль'/>
             <p className='form__input-error'>Ошибка</p>
           </fieldset>
           <button type='submit' className='form__submit-btn' aria-label='Зарегистрироваться'>Зарегистрироваться</button>

@@ -24,9 +24,9 @@
   content: '';
   margin-left: auto;
   display: inline-block;
-  width: 18px;
+  width: 29px;
   height: 18px;
-  background-image: url(../../images/link-arrow.png);
+  background-image: url(../../images/link-arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -49,19 +49,20 @@
   font-weight: 400;
   line-height: 50px;
   letter-spacing: -0.04em;
+  margin-right: 20px;
 }
 
 .portfolio__project:hover {
   opacity: .7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .portfolio__project-link {
     font-size: 28px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .portfolio__project-link {
     font-size: 28px;
   }
@@ -77,6 +78,18 @@
   .portfolio__project-link {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .portfolio__project::after {
+    content: '';
+    margin-left: auto;
+    display: inline-block;
+    width: 18px;
+    height: 28px;
+    background-image: url(../../images/link-arrow.svg);
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
   }
 }
 

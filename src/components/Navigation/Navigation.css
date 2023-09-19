@@ -40,7 +40,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .navigation {
     display: none;
   }

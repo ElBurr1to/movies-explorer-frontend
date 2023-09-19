@@ -11,6 +11,8 @@ import Page from '../Page404/Page404';
 import Profile from '../Profile/Profile';
 
 function App() {
+  document.documentElement.setAttribute('lang', 'ru');
+
   return (
     <div className="page">
       <Routes>
