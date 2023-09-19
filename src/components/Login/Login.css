@@ -1,13 +1,14 @@
 .login {
   min-height: 100vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   padding: 70px;
   box-sizing: border-box;
 }
 
 .login__content {
+  min-height: 560px;
   display: flex;
   flex-direction: column;
   max-width: 396px;
@@ -122,18 +123,14 @@
   opacity: .7;
 }
 
-@media (max-width: 800px) {
-  .login {
-    padding: 232px 70px;
-  }
-}
-
 @media (max-width: 450px) {
   .login {
     padding: 0;
+    align-items: stretch;
   }
 
   .login__content {
+    min-height: 0;
     padding: 56px 30px 30px;
     display: flex;
     flex-direction: column;

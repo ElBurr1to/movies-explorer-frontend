@@ -1,13 +1,14 @@
 .register {
   min-height: 100vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   padding: 70px;
   box-sizing: border-box;
 }
 
 .register__content {
+  min-height: 560px;
   display: flex;
   flex-direction: column;
   max-width: 396px;
@@ -86,7 +87,7 @@
 }
 
 .form__submit-btn {
-  margin-top: 10px;
+  margin-top: auto;
   width: 100%;
   border: none;
   border-radius: 3px;
@@ -123,18 +124,15 @@
   opacity: .7;
 }
 
-@media (max-width: 800px) {
-  .register {
-    padding: 232px 70px;
-  }
-}
 
 @media (max-width: 450px) {
   .register {
     padding: 0;
+    align-items: stretch;
   }
 
   .register__content {
+    min-height: 0;
     padding: 56px 30px 30px;
     display: flex;
     flex-direction: column;
