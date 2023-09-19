@@ -1,0 +1,91 @@
+.footer {
+  padding: 80px 0 20px;
+  margin-top: auto;
+}
+
+.footer__paragraph {
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #424242;
+  color: #8B8B8B;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+  margin-top: 19px;
+}
+
+.footer__year {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.footer__links {
+  margin-left: auto;
+}
+
+.footer__links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: inherit;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.footer__link:hover {
+  opacity: .7;
+}
+
+@media (max-width: 450px) {
+  .footer {
+    padding: 80px 10px 20px;
+  }
+  .footer__paragraph {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__info {
+    flex-direction: column-reverse;
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .footer__links {
+    margin: 0;
+  }
+
+  .footer__links-list {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__year {
+    font-size: 12px;
+    line-height: 15px;
+    color: #8b8b8b;
+  }
+}

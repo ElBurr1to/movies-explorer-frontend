@@ -1,0 +1,34 @@
+.header {
+  padding: 18px 0;
+  background-color: #202020;
+}
+
+.header_blue {
+  background-color: #073042;
+}
+
+.header_movies {
+  background-color: #202020;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 45px;
+}
+
+.header__logo-link {
+  font-size: 0;
+}
+
+.header__profile {
+  margin-left: auto;
+}
+
+@media (max-width: 450px) {
+  .header {
+    padding: 18px 14px;
+  }
+}
