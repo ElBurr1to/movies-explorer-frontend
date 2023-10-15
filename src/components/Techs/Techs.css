@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .techs {
     padding: 54px 18px;
   }

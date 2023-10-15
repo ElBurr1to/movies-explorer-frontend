@@ -21,7 +21,7 @@
   opacity: .8;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .more-button__button {
     max-width: 240px;
   }

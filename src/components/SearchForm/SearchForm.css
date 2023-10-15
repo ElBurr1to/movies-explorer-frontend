@@ -25,7 +25,7 @@
 }
 
 .search-form__input {
-  background-color: transparent;
+  background-color: #2f2f2f;
   border: none;
   font-size: 18px;
   font-weight: 400;
@@ -34,6 +34,12 @@
   height: 80%;
   width: 70%;
 }
+
+.search-form__input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 40rem #2f2f2f inset;
+}
+
 
 .search-form__bar::before {
   content: '';
@@ -101,7 +107,7 @@
   }
 
   .search-form__bar {
-    padding: 0 20px 0 30px;
+    padding: 0 20px 0 20px;
   }
 
   .search-form__checkbox {
@@ -110,7 +116,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .search-form {
     padding: 0 14px 10px;
   }

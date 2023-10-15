@@ -49,7 +49,7 @@
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .page404 {
     padding: 40px 0 30px;
   }

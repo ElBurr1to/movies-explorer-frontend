@@ -1,5 +1,7 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { AppContext } from '../../contexts/AppContext';
 import './Header.css';
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';
@@ -9,7 +11,7 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import ProfileLink from '../ProfileLink/ProfileLink';
 
 function Header(props) {
-  let isLogged = true;
+  const { isLogged } = React.useContext(AppContext);
 
   return (
     <header className={`header ${props.color ? 'header_' + props.color : ''}`}>
@@ -19,10 +21,12 @@ function Header(props) {
           <Navigation />
           <div className='header__profile'>
             {isLogged
-              ? <ProfileLink color={props.color}/>
+              ? <>
+                <ProfileLink color={props.color}/>
+                <BurgerMenu />
+                </>
               : <AuthorizationBar />
             }
-            <BurgerMenu />
           </div>
         </div>
       </Container>

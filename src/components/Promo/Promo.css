@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .promo {
     padding: 183px 10px 40px;
   }

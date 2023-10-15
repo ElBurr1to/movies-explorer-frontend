@@ -99,7 +99,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .about-me {
     padding: 80px 14px 70px;
   }

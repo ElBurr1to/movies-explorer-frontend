@@ -7,21 +7,11 @@ function MoviesCardList(props) {
     <section className='movies-list'>
       <Container>
         <ul className='movies-list__list'>
-          <li className='movies-list__list-item'>
-            <MoviesCard></MoviesCard>
-          </li>
-          <li className='movies-list__list-item'>
-            <MoviesCard></MoviesCard>
-          </li>
-          <li className='movies-list__list-item'>
-            <MoviesCard></MoviesCard>
-          </li>
-          <li className='movies-list__list-item'>
-            <MoviesCard></MoviesCard>
-          </li>
-          <li className='movies-list__list-item'>
-            <MoviesCard></MoviesCard>
-          </li>
+          {props.movies.map(movie => (
+            <li className='movies-list__list-item' key={movie.id}>
+              <MoviesCard movie={movie} handleLikeClick={props.handleLikeClick}/>
+            </li>
+          ))}
         </ul>
       </Container>
     </section>

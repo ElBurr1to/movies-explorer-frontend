@@ -88,7 +88,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .burger-menu__button {
     width: 22px;
     gap: 6.5px;

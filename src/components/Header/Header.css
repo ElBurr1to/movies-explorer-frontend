@@ -27,7 +27,7 @@
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .header {
     padding: 18px 14px;
   }

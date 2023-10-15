@@ -4,7 +4,9 @@
 
 .movies-card__poster {
   width: 100%;
+  aspect-ratio: 16 / 9;
 }
+
 
 .movies-card__name-container {
   display: flex;
@@ -80,7 +82,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .movies-card__name {
     margin: 0;
     margin-top: 5px;

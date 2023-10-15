@@ -40,6 +40,10 @@
   line-height: 13px;
 }
 
+.profile__label_invalid {
+  color: #EE3465;
+}
+
 .profile__label:last-of-type {
   border-bottom: none;
 }
@@ -59,7 +63,52 @@
   margin-left: auto;
 }
 
+.profile__input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 40rem #202020 inset;
+}
+
+.profile__input_invalid {
+  color: #EE3465;
+}
+
+.form__submit-btn-error {
+  visibility: hidden;
+  margin: 0;
+  margin-top: 189px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  text-align: center;
+  color: #EE3465;
+}
+
+.form__submit-btn-error_visible {
+  visibility: visible;
+}
+
 .profile__submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 13px 0 15px;
+  font-family: Inter;
+  background-color: grey;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: white;
+  pointer-events: none;
+}
+
+.profile__submit-btn_active {
+  background-color: #4285f4;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.profile__button {
   align-self: center;
   margin-top: 205px;
   font-size: 13px;
@@ -71,12 +120,12 @@
   cursor: pointer;
 }
 
-.profile__submit-btn_type_exit {
+.profile__button_type_exit {
   margin-top: 16px;
   color: #ee3465;
 }
 
-.profile__submit-btn:hover {
+.profile__button:hover {
   opacity: .8;
 }
 
@@ -89,16 +138,24 @@
     margin-top: 82px;
   }
 
+  .form__submit-btn-error {
+    margin-top: 179px;
+  }
+
   .profile__submit-btn {
+    margin-top: 15px;
+  }
+
+  .profile__button {
     margin-top: 195px;
   }
 
-  .profile__submit-btn_type_exit {
+  .profile__button_type_exit {
     margin-top: 16px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .profile__form {
     justify-content: flex-start;
     padding: 70px 30px 40px;
@@ -108,14 +165,27 @@
     margin-top: 66px;
   }
 
+  .form__submit-btn-error {
+    margin-top: auto;
+    font-size: 10px;
+    line-height: 11px;
+  }
+
   .profile__submit-btn {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+  }
+
+  .profile__button {
     margin-top: auto;
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
   }
 
-  .profile__submit-btn_type_exit {
+  .profile__button_type_exit {
     margin-top: 16px;
   }
 }

@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .portfolio__project-link {
     font-size: 28px;
   }
