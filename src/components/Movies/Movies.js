@@ -27,6 +27,7 @@ function Movies(props) {
   const [searchError, setSearchError] = React.useState('');
   const { showPopup } = React.useContext(AppContext);
   const [didMount, setDidMount] = useState(false);
+  const [isInputDisabled, setIsInputDisabled] = React.useState(false);
 
   React.useEffect(() => {
     setDidMount(true);
@@ -53,7 +54,7 @@ function Movies(props) {
   }
 
   function getMoreMoviesCountListener() {
-    if (window.innerWidth < constants.MOBILE_WIDTH) return (constants.MOBILE_MORE_CARDS_COUNT - (uploadedMoviesCount % constants.MOBILE_MORE_CARDS_COUNT));
+    if (window.innerWidth < constants.MOBILE_WIDTH) return constants.MOBILE_MORE_CARDS_COUNT;
     else if (window.innerWidth < constants.MEDIUM_WIDTH) return (constants.MOBILE_MEDIUM_MORE_CARDS_COUNT - (uploadedMoviesCount % constants.MOBILE_MEDIUM_MORE_CARDS_COUNT));
     else if (window.innerWidth < constants.LARGE_WIDTH) return (constants.MEDIUM_LARGE_MORE_CARDS_COUNT - (uploadedMoviesCount % constants.MEDIUM_LARGE_MORE_CARDS_COUNT));
     else return (constants.LARGE_MORE_CARDS_COUNT - (uploadedMoviesCount % constants.LARGE_MORE_CARDS_COUNT));
@@ -95,6 +96,7 @@ function Movies(props) {
     setUploadedMoviesCount(0);
     setFilteredMovies([]);
     setMovies(JSON.parse(localStorage.getItem('films')));
+    setIsInputDisabled(true);
 
     if (movies.length === 0) {
       Promise.all([movieApi.getMovies(), mainApi.getSavedMovies()])
@@ -117,13 +119,14 @@ function Movies(props) {
         })
         .finally(() => {
           setIsLoading(false);
+          setIsInputDisabled(false);
         })
     }
     else {
       setFilteredMovies(movieApi.filterMovies(movies, {film, isShortFilms}));
       setIsLoading(false);
+      setIsInputDisabled(false);
     }
-
     localStorage.setItem('search', JSON.stringify({film, isShortFilms}));
   }
 
@@ -146,7 +149,7 @@ function Movies(props) {
       <Header/>
       <main>
         <section className='movies'>
-          <SearchForm onSubmit={handleMovieSearch} onShortMoviesFilterClick={onShortMoviesFilterClick} values={searchValues}/>
+          <SearchForm onSubmit={handleMovieSearch} onShortMoviesFilterClick={onShortMoviesFilterClick} values={searchValues} isInputDisabled={isInputDisabled}/>
           {uploadedMovies.length > 0
             ? <MoviesCardList movies={uploadedMovies} handleLikeClick={onLikeButtonClick}/>
             : <></>

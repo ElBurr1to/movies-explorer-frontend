@@ -13,7 +13,7 @@ function Profile(props) {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isRedacting, setIsRedacting] = React.useState(false);
   const { showPopup } = React.useContext(AppContext);
-
+  const [isInputDisabled, setIsInputDisabled] = React.useState(false);
 
   React.useEffect(() => {
     setValues(currentUser);
@@ -27,6 +27,7 @@ function Profile(props) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
+    setIsInputDisabled(true);
     setIsLoading(true);
     mainApi.setUserInfo(values.name, values.email)
       .then(res => {
@@ -38,6 +39,7 @@ function Profile(props) {
           .then(errBody => showPopup(errBody.message, 'fail'));
       })
       .finally(() => {
+        setIsInputDisabled(false);
         setIsLoading(false);
         onRedacting(false);
       })
@@ -61,11 +63,11 @@ function Profile(props) {
           <fieldset className='profile__fieldset'>
             <label for='name' className={`profile__label ${errors['name']  ? 'profile__label_invalid' : '' }`}>
               Имя
-              <input type='text' id='name' name='name' className={`profile__input ${errors['name']  ? 'profile__input_invalid' : '' }`} aria-label='Имя' value={values['name']} onChange={onChange} placeholder='Введите имя' disabled={!isRedacting}/>
+              <input type='text' id='name' name='name' className={`profile__input ${errors['name']  ? 'profile__input_invalid' : '' }`} aria-label='Имя' value={values['name']} onChange={onChange} placeholder='Введите имя' disabled={!isRedacting} disabled={isInputDisabled}/>
             </label>
             <label for='email' className={`profile__label ${errors['email']  ? 'profile__label_invalid' : '' }`}>
               E-mail
-              <input type='email' id='email' name='email' className={`profile__input ${errors['email']  ? 'profile__input_invalid' : '' }`} aria-label='E-mail' value={values['email']} onChange={onChange} placeholder='Введите почту' disabled={!isRedacting}/>
+              <input type='email' id='email' name='email' className={`profile__input ${errors['email']  ? 'profile__input_invalid' : '' }`} aria-label='E-mail' value={values['email']} onChange={onChange} placeholder='Введите почту' disabled={!isRedacting} disabled={isInputDisabled}/>
             </label>
           </fieldset>
           {isRedacting
@@ -74,7 +76,7 @@ function Profile(props) {
                 <button type='submit' className={`profile__submit-btn ${isValid ? 'profile__submit-btn_active' : '' }`} aria-label='Сохранить'>{isLoading ? 'Сохранение...' : 'Сохранить'}</button>
               </>
             : <>
-                <button type='button' className='profile__button' aria-label='Редактировать' onClick={onRedacting}>Редактировать</button>
+                <button type='button' className='profile__button' aria-label='Редактировать' onClick={onRedacting} disabled={isInputDisabled}>Редактировать</button>
                 <button type='button' className='profile__button profile__button_type_exit' aria-label='Выйти' onClick={props.onLogout}>Выйти из аккаунта</button>
               </>
           }

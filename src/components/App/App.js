@@ -17,7 +17,7 @@ import ProtectedRouteElement from '../ProtectedRoute/ProtectedRoute.js';
 
 function App() {
   document.documentElement.setAttribute('lang', 'ru');
-  const [isLogged, setIsLogged] = React.useState(false);
+  const [isLogged, setIsLogged] = React.useState(localStorage.getItem('isLogged') === 'true' || false);
   const [currentUser, setCurrentUser] = React.useState({
     name: '',
     email: '',
@@ -26,8 +26,7 @@ function App() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    const isLoggedLocalStorage = localStorage.getItem('isLogged');
-    if (isLoggedLocalStorage === 'true') {
+    if (isLogged) {
       mainApi.getUserInfo()
         .then(userData => {
           setCurrentUser(userData);
@@ -77,7 +76,7 @@ function App() {
   function handleProfileLogout() {
     mainApi.signout()
       .then(() => {
-        localStorage.removeItem('isLogged');
+        localStorage.clear()
         setIsLogged(false);
         navigate('/');
       })

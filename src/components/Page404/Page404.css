@@ -26,12 +26,15 @@
 }
 
 .page404__link {
+  background: none;
+  border: none;
+  margin: 0;
   margin-top: auto;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: #4285f4;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .page404__link:hover {

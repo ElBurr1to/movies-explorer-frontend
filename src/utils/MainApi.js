@@ -127,7 +127,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'https://api.elburrito.films.nomoredomainsicu.ru'
+  baseUrl: 'http://localhost:3001' ////'https://api.elburrito.films.nomoredomainsicu.ru'
 });
 
 export default mainApi;

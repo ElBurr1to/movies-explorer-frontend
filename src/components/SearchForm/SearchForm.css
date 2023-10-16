@@ -55,6 +55,10 @@
   color: #8b8b8b;
 }
 
+.search-form__input_error::placeholder {
+  color: rgb(146, 62, 62);
+}
+
 .search-form__input:focus {
   outline: none;
 }
